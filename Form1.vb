@@ -33,20 +33,23 @@ Public Class Form1
     Friend WithEvents MainMenu1 As System.Windows.Forms.MainMenu
     Friend WithEvents MenuItem1 As System.Windows.Forms.MenuItem
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
-        Me.TextControl1 = New TXTextControl.TextControl
-        Me.MainMenu1 = New System.Windows.Forms.MainMenu
-        Me.MenuItem1 = New System.Windows.Forms.MenuItem
+        Me.components = New System.ComponentModel.Container()
+        Me.TextControl1 = New TXTextControl.TextControl()
+        Me.MainMenu1 = New System.Windows.Forms.MainMenu(Me.components)
+        Me.MenuItem1 = New System.Windows.Forms.MenuItem()
         Me.SuspendLayout()
         '
         'TextControl1
         '
         Me.TextControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TextControl1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.TextControl1.FormattingPrinter = "Standard"
         Me.TextControl1.Location = New System.Drawing.Point(0, 0)
         Me.TextControl1.Name = "TextControl1"
         Me.TextControl1.Size = New System.Drawing.Size(696, 413)
         Me.TextControl1.TabIndex = 0
         Me.TextControl1.Text = "TextControl1"
+        Me.TextControl1.UserNames = Nothing
         '
         'MainMenu1
         '
@@ -59,7 +62,7 @@ Public Class Form1
         '
         'Form1
         '
-        Me.AutoScaleBaseSize = New System.Drawing.Size(5, 13)
+        Me.AutoScaleBaseSize = New System.Drawing.Size(8, 19)
         Me.ClientSize = New System.Drawing.Size(696, 413)
         Me.Controls.Add(Me.TextControl1)
         Me.Menu = Me.MainMenu1
